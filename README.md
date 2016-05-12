@@ -1,3 +1,4 @@
+<img src="images/anaglypher_logo_large.png" width=128>
 # anaglypher
 Python script for making anaglyph-3D maps from a DEM.
 
@@ -23,7 +24,7 @@ The software is usable as a script from the command line, which presents the sim
 * `--dem, -d`: elevation dataset filename
 * `--input, -i`: image to anaglyph
 * `--output, -o`: anaglyph image to save
-* `--altitude`: elevation/altitude of the observer
+* `--altitude, --alt, -a`: elevation/altitude of the observer
 * `--separation, --sep, -s`: eye-separation distance of the observer
 * `--nadir, -n`: ratio between the left and right eye that points nadir to the ground
 * `--plane, -p`: elevation/altitude to place the image-plane
@@ -77,3 +78,16 @@ As shown above, setting the image plane below the lowest elevation will cause
 the anaglyph image to pop-up.
 Setting the image plane above the highest elevation will create an anaglyph
 image that is recessed.
+
+## Example Results
+The results shown below use free products from the United States Geological Survey ([USGS](https://www.usgs.gov/)). DEMs are available as part of the 3D Elevation Program ([3DEP](http://nationalmap.gov/3DEP/index.html)) through the [National Map](http://viewer.nationalmap.gov/basic/?basemap=b1&category=ned,nedsrc&title=3DEP%20View). The imagery used are Landsat 8 scenes (Band 8) acquired through the USGS [Earth Explorer](http://earthexplorer.usgs.gov/).
+
+### Black Canyon of the Gunnison National Park, Colorado
+![Black Canyon](images/black_canyon_3sec.gif)
+
+This example uses a high image plane to simulate a shadow box effect for the imagery and hillshade.
+
+### Grand Teton National Park, Wyoming
+![Grand Teton](images/tetons_1sec.gif)
+
+Even without anaglyph glasses, it is possible to see that high elevations like mountain peaks (Grand Teton at bottom-center of image) are shifted more than low elevations (Jenny Lake, the fan-shaped lake on right of image).
